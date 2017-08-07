@@ -167,6 +167,9 @@ GIT_BASE = http://localhost
 NOVNC_REPO = http://localhost/openstack/noVNC.git
 SPICE_REPO = http://localhost/openstack/spice-html5.git
 
+UPPER_CONSTRAINTS_FILE=https://github.com/openstack/requirements/plain/upper-constraints.txt
+
+
 IMAGE_URLS="http://localhost/images/xenial-server-cloudimg-s390x-disk1.img"
 
 ```
