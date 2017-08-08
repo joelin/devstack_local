@@ -179,8 +179,8 @@ SPICE_REPO = http://localhost/openstack/spice-html5.git
 
 PIP_GET_PIP_URL=http://localhost/soft/get-pip.py
 
-# https://localhost/soft/{version}/etcd-{version}-linux-{ETCD_ARCH}.tar.gz
-ETCD_DOWNLOAD_URL=https://localhost/soft
+# https://localhost/soft/etcd/{version}/etcd-{version}-linux-{ETCD_ARCH}.tar.gz
+ETCD_DOWNLOAD_URL=https://localhost/soft/etcd
 
 UPPER_CONSTRAINTS_FILE=https://github.com/openstack/requirements/plain/upper-constraints.txt
 
