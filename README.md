@@ -177,7 +177,9 @@ GIT_BASE = http://localhost
 NOVNC_REPO = http://localhost/openstack/noVNC.git
 SPICE_REPO = http://localhost/openstack/spice-html5.git
 
-PIP_GET_PIP_URL=http://172.17.254.218/soft/get-pip.py
+PIP_GET_PIP_URL=http://localhost/soft/get-pip.py
+
+ETCD_DOWNLOAD_URL=https://localhost/soft/etcd-v3.1.7-linux-amd64.tar.gz
 
 UPPER_CONSTRAINTS_FILE=https://github.com/openstack/requirements/plain/upper-constraints.txt
 
