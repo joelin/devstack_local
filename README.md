@@ -15,10 +15,18 @@ https://mirrors.aliyun.com/epel/7/
 
 
 ### pip源
+
+pip源有两种方式，有资源准备全量源更好，没有的话使用按需下载的方式。
+
+* 全量源
 pypi源搭建可以选择多种方式，比如　pypi-mirror　有选择性的同步需要的模块，　rsync、bandersnatch　同步所有的模块。
 
 准备完毕后，应该可以提供如下访问方式：　
 https://mirrors.aliyun.com/pypi
+
+* 按需下载源
+根据openstack的 requirements项目，找到所要的pip模块，https://github.com/openstack/requirements
+使用pip2pi工具下载这些模块，并使其成为pip源。参考: https://github.com/wolever/pip2pi
 
 
 ### 镜像地址
@@ -158,6 +166,8 @@ http://mirrors.aliyun.com/help/epel
 参考：
 http://mirrors.aliyun.com/help/pypi
 
+
+
 ## devstack配置
 详细使用请参考手册，这里只要描述如何切换到 intranet 的环境。
 在 local.conf 文件中，增加如下配置项，并指向内部源。
@@ -167,10 +177,14 @@ GIT_BASE = http://localhost
 NOVNC_REPO = http://localhost/openstack/noVNC.git
 SPICE_REPO = http://localhost/openstack/spice-html5.git
 
+PIP_GET_PIP_URL=http://172.17.254.218/soft/get-pip.py
+
 UPPER_CONSTRAINTS_FILE=https://github.com/openstack/requirements/plain/upper-constraints.txt
 
-
 IMAGE_URLS="http://localhost/images/xenial-server-cloudimg-s390x-disk1.img"
+
+SKIP_EPEL_INSTALL=true
+
 
 ```
 
