@@ -51,6 +51,7 @@ https://mirrors.aliyun.com/pypi
     flake8-docstrings==0.2.1.post1
     flake8-import-order==0.12
     pylint==1.4.5
+    flake8-import-order==0.11
 
     openstack-requirements # tempest 使用
     ```
